@@ -4,12 +4,6 @@ import TableRow from './TaskRow.js'
 
 class MonitorTask extends Component{
 
-  state = {
-    //Should be populated with actual tasks from JSON file that we create or pulled from api created by backend team
-    //should be an array of task objects with three key/value pairs to match the column names on the Monitor Task Table
-    tasks: [{"name": "1", "status": "one", "description": "I"}, {"name": "2", "status": "two", "description": "II"}, {"name": "3", "status": "three", "description": "III"}, {"name": "4", "status": "four", "description": "IV"}]
-  }
-
   newRow = (task) => (
     <tr>
     <td>{task["name"]}</td>
@@ -34,7 +28,7 @@ class MonitorTask extends Component{
           </tr>
         </thead>
         <tbody>
-          {this.generateRows(this.state.tasks)}
+          {this.generateRows(this.props.tasks)}
         </tbody>
       </Table>
     )
