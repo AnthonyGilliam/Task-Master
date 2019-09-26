@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Switch, withRouter} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import HomeContainer from './components/HomeContainer'
-import NewTaskForm from './components/tasks/CreateNewTask'
+import CreateNewTask from './components/tasks/CreateNewTask'
 import './App.css';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/" component={HomeContainer} />
-            <Route exact path="/create-new-task" component={NewTaskForm} />
+            <Route path="/create-new-task" component={CreateNewTask} />
           </Switch >
         </section>
     );
