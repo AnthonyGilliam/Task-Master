@@ -12,8 +12,8 @@ export default function TaskDetailView(props) {
 
         // 10 is the current time for testing purposed
         let currentTime = 10;
-
         // let currentTime = new Date().getSeconds()
+        
         let accuredTime = getAccuredTime(currentTime,startTime)
         console.log(accuredTime)
         let runTime = getRunTime(endTime,startTime)
@@ -39,25 +39,25 @@ export default function TaskDetailView(props) {
             <Table className="tg">
                 <tbody>
                     <tr >
-                        <th className="tg-0lax" colspan="2">Task Detail for : {props.taskName}</th>
+                        <th className="tg-TaskDetail" colspan="2">Task Detail for : {props.taskName}</th>
                     </tr>
                     <tr >
-                        <td className="tg-0lax" colspan="2"> {props.description}</td>
+                        <td className="tg-TaskDetail" colspan="2"> {props.description}</td>
                     </tr>
                     <tr>
-                        <td className="tg-lqy6">Start Time: {props.startTime}</td>
-                        <td className="tg-0pky">End Time: {props.endTime} </td>
+                        <td className="tg-rightColSide">Start Time: {props.startTime}</td>
+                        <td className="tg-leftColSide">End Time: {props.endTime} </td>
                     </tr>
                     <tr>
-                        <td className="tg-lqy6">Status:</td>
-                        <td className="tg-0pky">{props.status}</td>
+                        <td className="tg-rightColSide">Status:</td>
+                        <td className="tg-leftColSide">{props.status}</td>
                     </tr>
                     <tr>
-                        <td className="tg-lqy6">Created Time:</td>
-                        <td className="tg-0pky"> {props.createdTime}</td>
+                        <td className="tg-rightColSide">Created Time:</td>
+                        <td className="tg-leftColSide"> {props.createdTime}</td>
                     </tr>
                     <tr>
-                        <td className="tg-0lax" colspan="2">
+                        <td className="" colspan="2">
                             <ProgressBar  className="tg-progressBar" label={`${updateTime()}%`} now={updateTime()} />
                         </td>
                     </tr>
